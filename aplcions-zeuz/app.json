@@ -18,10 +18,6 @@
       "bundleIdentifier": "com.zeus.app"
     },
     "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      },
       "package": "com.zeus.app",
       "edgeToEdgeEnabled": true
     },
