@@ -1,0 +1,37 @@
+{
+  "name": "app",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^19.2.3",
+    "react-native-webview": "^13.16.0",
+    "@expo/vector-icons": "^15.0.3",
+    "axios": "^1.13.2",
+    "react-native-safe-area-context": "^5.6.2",
+    "react-native": "^0.83.1",
+    "@react-navigation/bottom-tabs": "^7.9.0",
+    "@react-native-async-storage/async-storage": "^2.2.0",
+    "@react-navigation/native-stack": "^7.9.0",
+    "expo": "^54.0.30",
+    "expo-image-picker": "^17.0.10",
+    "expo-linear-gradient": "^15.0.8",
+    "@react-navigation/native": "^7.1.26",
+    "expo-status-bar": "^3.0.9",
+    "expo-document-picker": "^14.0.8",
+    "expo-linking": "^8.0.11",
+    "expo-image": "^3.0.11",
+    "expo-web-browser": "^15.0.10"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "typescript": "~5.8.2",
+    "vite": "^6.2.0"
+  }
+}
