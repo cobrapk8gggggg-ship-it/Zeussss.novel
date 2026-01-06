@@ -1,45 +1,64 @@
 {
   "expo": {
-    "name": "Zeuz",
-    "slug": "aplcions-zeuz",
+    "name": "ZEUS Novel",
+    "slug": "zeus-novel",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "scheme": "zeuzapp",
+    "icon": "./assets/logo.png",
+    "scheme": "zeusnovel",
     "userInterfaceStyle": "dark",
     "backgroundColor": "#000000",
     "newArchEnabled": true,
     "splash": {
-      "image": "./assets/splash-icon.png",
+      "image": "./assets/ZEUS.png",
       "resizeMode": "contain",
       "backgroundColor": "#000000"
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.zeus.app"
+      "bundleIdentifier": "com.zeus.novel",
+      "infoPlist": {
+        "UIBackgroundModes": ["audio"]
+      }
     },
     "android": {
-      "package": "com.zeus.app",
-      "edgeToEdgeEnabled": true
+      "package": "com.zeus.novel",
+      "edgeToEdgeEnabled": true,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/logo.png",
+        "backgroundColor": "#000000"
+      }
     },
     "web": {
-      "favicon": "./assets/favicon.png",
-      "name": "Zeuz",
-      "shortName": "Zeuz",
+      "favicon": "./assets/logo.png",
+      "name": "ZEUS Novel",
+      "shortName": "ZEUS",
       "lang": "ar",
       "display": "standalone",
       "backgroundColor": "#000000",
       "themeColor": "#000000",
       "startUrl": "/",
       "orientation": "portrait",
-      "description": "تطبيق Zeuz لقراءة الروايات",
+      "dir": "rtl",
       "barStyle": "black-translucent",
+      "description": "أفضل تطبيق لقراءة الروايات العربية والمترجمة",
+      "preferRelatedApplications": true,
       "meta": {
         "apple-mobile-web-app-capable": "yes",
         "apple-mobile-web-app-status-bar-style": "black-translucent",
+        "apple-mobile-web-app-title": "ZEUS Novel",
         "mobile-web-app-capable": "yes",
+        "format-detection": "telephone=no",
         "viewport": "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"
       }
-    }
+    },
+    "plugins": [
+      [
+        "expo-document-picker",
+        {
+          "iCloudContainerEnvironment": "Production"
+        }
+      ]
+    ]
   }
 }

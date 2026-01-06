@@ -6,6 +6,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
 import { StatusBar } from 'expo-status-bar';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
+import * as Linking from 'expo-linking';
 
 // Contexts
 import { AuthProvider, AuthContext } from './src/context/AuthContext';
@@ -31,6 +32,36 @@ import BulkUploadScreen from './src/screens/BulkUploadScreen';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
+
+// Linking Configuration for Web/PWA
+const prefix = Linking.createURL('/');
+const linking = {
+  prefixes: [prefix],
+  config: {
+    screens: {
+      Login: 'login',
+      Signup: 'signup',
+      MainTabs: {
+        screens: {
+          Home: 'home',
+          Library: 'library',
+          Profile: 'profile',
+        },
+      },
+      NovelDetail: 'novel/:id',
+      Reader: 'read/:novelId/:chapterId',
+      Search: 'search',
+      Category: 'category/:title',
+      UserProfile: 'user/:userId',
+      // Admin Routes
+      AdminMain: 'admin',
+      AdminDashboard: 'admin/dashboard',
+      Management: 'admin/novels',
+      UsersManagement: 'admin/users',
+      BulkUpload: 'admin/upload',
+    },
+  },
+};
 
 function MainTabs() {
   return (
@@ -81,7 +112,7 @@ function AppNavigation() {
   }
 
   return (
-    <NavigationContainer>
+    <NavigationContainer linking={linking} fallback={<ActivityIndicator color="#4a7cc7" />}>
       <Stack.Navigator 
         screenOptions={{ 
           headerShown: false,

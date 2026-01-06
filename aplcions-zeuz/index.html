@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#000000">
+  <meta name="description" content="ZEUS Novel - تطبيق قراءة الروايات">
+  
+  <!-- Link to the manual Manifest -->
+  <link rel="manifest" href="/manifest.json">
+
+  <!-- iOS Meta Tags for PWA -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="ZEUS Novel">
+  <link rel="apple-touch-icon" href="/assets/logo.png">
+
+  <title>ZEUS Novel</title>
+
+  <!-- Import Map -->
+  <script type="importmap">
+  {
+    "imports": {
+      "react": "https://esm.sh/react@18.3.1",
+      "react-dom": "https://esm.sh/react-dom@18.3.1",
+      "react-native-webview": "https://esm.sh/react-native-webview@13.12.5",
+      "@expo/vector-icons": "https://esm.sh/@expo/vector-icons@14.0.0",
+      "axios": "https://esm.sh/axios@1.7.9",
+      "react-native-safe-area-context": "https://esm.sh/react-native-safe-area-context@4.12.0",
+      "react-native": "https://esm.sh/react-native@0.76.6",
+      "@react-navigation/bottom-tabs": "https://esm.sh/@react-navigation/bottom-tabs@7.0.0",
+      "@react-native-async-storage/async-storage": "https://esm.sh/@react-native-async-storage/async-storage@1.23.1",
+      "@react-navigation/native-stack": "https://esm.sh/@react-navigation/native-stack@7.0.0",
+      "expo": "https://esm.sh/expo@52.0.28",
+      "expo-image-picker": "https://esm.sh/expo-image-picker@16.0.4",
+      "expo-linear-gradient": "https://esm.sh/expo-linear-gradient@14.0.2",
+      "@react-navigation/native": "https://esm.sh/@react-navigation/native@7.0.0",
+      "expo-status-bar": "https://esm.sh/expo-status-bar@2.0.0",
+      "expo-document-picker": "https://esm.sh/expo-document-picker@13.0.2",
+      "expo-linking": "https://esm.sh/expo-linking@7.0.4",
+      "expo-image": "https://esm.sh/expo-image@2.0.0",
+      "expo-web-browser": "https://esm.sh/expo-web-browser@14.0.2"
+    }
+  }
+  </script>
+  
+  <style>
+    /* Ensure full screen black background for PWA start */
+    body, html, #root {
+      height: 100%;
+      width: 100%;
+      background-color: #000000;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+</body>
+</html>
